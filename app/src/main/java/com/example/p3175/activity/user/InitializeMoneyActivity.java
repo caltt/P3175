@@ -45,26 +45,35 @@ public class InitializeMoneyActivity extends BaseActivity {
             String savings = editTextSavings.getText().toString();
 
             // db insert: recurring transaction
-            if (!salary.isEmpty()) {
+            if (!salary.isEmpty()&&!savings.isEmpty()) {
                 db.insertRecurringTransaction(new RecurringTransaction(
                         currentUserId,
                         Converter.stringToBigDecimal(salary),
                         1,
                         "Salary"
                 ));
-            }
 
-            // db update: overview
-            if (!savings.isEmpty()) {
+                // db update: overview
                 currentOverview.setSavings(Converter.stringToBigDecimal(savings));
                 db.updateOverview(currentOverview);
+
+                // nav to main activity, unable to nav back
+                Toast.makeText(this, "Account created.", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+
+            }else{
+                Toast.makeText(InitializeMoneyActivity.this,"Please Enter Salary and Savings", Toast.LENGTH_SHORT).show();
+
             }
 
-            // nav to main activity, unable to nav back
-            Toast.makeText(this, "Account created.", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, LoginActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
+//            // db update: overview
+//            if (!savings.isEmpty()) {
+//                currentOverview.setSavings(Converter.stringToBigDecimal(savings));
+//                db.updateOverview(currentOverview);
+//            }
+
         });
         //endregion
     }
