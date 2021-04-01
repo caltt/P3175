@@ -8,11 +8,11 @@
     <fragment
         android:id="@+id/expenseTrackerFragment"
         android:name="com.example.p3175.activity.main.ExpenseTrackerFragment"
-        android:label="fragment_expense_tracker"
+        android:label="Expennse Tracker"
         tools:layout="@layout/fragment_expense_tracker" />
     <fragment
         android:id="@+id/bigExpensePlannerFragment"
         android:name="com.example.p3175.activity.main.BigExpensePlannerFragment"
-        android:label="fragment_big_expense_planner"
+        android:label="Big Big Expense Planner"
         tools:layout="@layout/fragment_big_expense_planner" />
 </navigation>

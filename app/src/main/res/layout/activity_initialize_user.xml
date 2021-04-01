@@ -31,7 +31,6 @@
         android:gravity="center"
         android:hint="@string/hint_current_savings"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/buttonInitialManageRecurring"
         app:layout_constraintEnd_toEndOf="@+id/editTextInitialSalary"
         app:layout_constraintStart_toStartOf="@+id/editTextInitialSalary"
         app:layout_constraintTop_toBottomOf="@+id/editTextInitialSalary" />
@@ -49,17 +48,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/buttonInitialManageRecurring"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed"
-        android:text="@string/button_text_salary_bill"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
 
     <Button
         android:id="@+id/buttonInitialOK"

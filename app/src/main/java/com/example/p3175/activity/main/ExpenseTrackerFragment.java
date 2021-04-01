@@ -47,6 +47,8 @@ public class ExpenseTrackerFragment extends BaseFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_expense_tracker, container, false);
+
+
     }
 
     @Override

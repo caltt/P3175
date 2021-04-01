@@ -42,6 +42,7 @@ public class ManageCategoryActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_category);
+        this.setTitle("Edit Category");
 
         //region 0. VIEW
 

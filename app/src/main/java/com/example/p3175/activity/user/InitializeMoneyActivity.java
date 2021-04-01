@@ -13,6 +13,7 @@ import androidx.annotation.RequiresApi;
 
 import com.example.p3175.R;
 import com.example.p3175.activity.base.BaseActivity;
+import com.example.p3175.activity.recurringtransaction.ManageIncome;
 import com.example.p3175.activity.recurringtransaction.ManageRecurringTransactionActivity;
 import com.example.p3175.db.entity.RecurringTransaction;
 import com.example.p3175.util.Converter;
@@ -29,18 +30,18 @@ public class InitializeMoneyActivity extends BaseActivity {
 
         EditText editTextSavings = findViewById(R.id.editTextInitialSavings);
         EditText editTextSalary = findViewById(R.id.editTextInitialSalary);
-        Button buttonManageRecurringTransaction = findViewById(R.id.buttonInitialManageRecurring);
+        //Button buttonManageRecurringTransaction = findViewById(R.id.buttonInitialManageRecurring);
         Button buttonOK = findViewById(R.id.buttonInitialOK);
         //endregion
 
         //region 2. BUTTON
 
-        buttonManageRecurringTransaction.setOnClickListener(v -> {
-            // nav to manage salary & bill
-            Intent intent = new Intent(this, ManageRecurringTransactionActivity.class);
-            intent.putExtra(getString(R.string.current_user_id), currentUserId);
-            startActivity(intent);
-        });
+//        buttonManageRecurringTransaction.setOnClickListener(v -> {
+//            // nav to manage salary & bill
+//            Intent intent = new Intent(this, ManageRecurringTransactionActivity.class);
+//            intent.putExtra(getString(R.string.current_user_id), currentUserId);
+//            startActivity(intent);
+//        });
 
         buttonOK.setOnClickListener(v -> {
             String salary = editTextSalary.getText().toString();
@@ -65,7 +66,7 @@ public class InitializeMoneyActivity extends BaseActivity {
                         .setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(InitializeMoneyActivity.this, ManageRecurringTransactionActivity.class);
+                        Intent intent = new Intent(InitializeMoneyActivity.this, ManageIncome.class);
                         intent.putExtra(getString(R.string.current_user_id), currentUserId);
                         startActivity(intent);
                     }

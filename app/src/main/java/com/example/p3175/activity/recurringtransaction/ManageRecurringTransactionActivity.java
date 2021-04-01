@@ -56,6 +56,7 @@ public class ManageRecurringTransactionActivity extends BaseActivity {
         //endregion
 
 
+
         //region 1. RECYCLER VIEW
 
         adapterIncome = new RecurringTransactionAdapter();
