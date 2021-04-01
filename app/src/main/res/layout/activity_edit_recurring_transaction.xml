@@ -31,6 +31,8 @@
         android:id="@+id/buttonEditRecurringTransactionOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
         android:text="@string/button_text_ok"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,9 +43,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:autofillHints=""
         android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
         android:hint="@string/hint_amount"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/editTextEditRecurringTransactionDayOfMonth"
@@ -56,6 +59,8 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
         android:hint="@string/hint_date"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/editTextEditRecurringTransactionDescription"
@@ -67,10 +72,14 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
         android:text="@string/title_recurring_transaction"
-        android:textSize="24sp"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -79,6 +88,8 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
         android:hint="@string/hint_description"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/buttonEditRecurringTransactionOK"
@@ -99,12 +110,16 @@
             android:id="@+id/radioButtonIsIncome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
             android:text="@string/radio_button_text_income" />
 
         <RadioButton
             android:id="@+id/radioButtonIsBill"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
             android:text="@string/radio_button_text_bill" />
 
     </RadioGroup>

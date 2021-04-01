@@ -82,7 +82,7 @@
     <string name="button_text_add">Add</string>
     <string name="button_text_ok">OK</string>
     <string name="button_text_login">Login</string>
-    <string name="button_text_create_account">SignUp</string>
+    <string name="button_text_create_account">SignUp Here!</string>
     <string name="button_text_salary_bill">Manage Bill</string>
     <string name="radio_button_text_income">Income</string>
     <string name="radio_button_text_expense">Expense</string>

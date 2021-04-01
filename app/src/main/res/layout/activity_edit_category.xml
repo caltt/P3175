@@ -11,10 +11,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_category"
-        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline29"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif-black"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -30,12 +33,16 @@
             android:id="@+id/radioButtonEditCategoryIsIncome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
             android:text="@string/radio_button_text_income" />
 
         <RadioButton
             android:id="@+id/radioButtonEditCategoryIsExpense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
             android:text="@string/radio_button_text_expense" />
     </RadioGroup>
 
@@ -45,6 +52,8 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
         android:hint="@string/hint_category_name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline30"
@@ -70,6 +79,8 @@
         android:id="@+id/buttonEditCategoryOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
         android:text="@string/button_text_ok"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

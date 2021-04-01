@@ -6,10 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".activity.overview.AddSavingsActivity">
 
+    <EditText
+        android:id="@+id/editTextAddSavingsAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:hint="@string/hint_amount"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAddSavingsCurrentIncomesTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddSavingsTitle" />
+
     <TextView
         android:id="@+id/textViewAddSavingsCurrentIncomesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
         android:text="@string/label_current_incomes"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/switchAddSavingsFromIncomes"
@@ -20,6 +37,8 @@
         android:id="@+id/switchAddSavingsFromIncomes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
         android:text="@string/switch_from_incomes"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonAddSavingsOK"
@@ -27,25 +46,15 @@
         app:layout_constraintStart_toStartOf="@+id/textViewAddSavingsCurrentIncomesTitle"
         app:layout_constraintTop_toBottomOf="@+id/textViewAddSavingsCurrentIncomesTitle" />
 
-    <EditText
-        android:id="@+id/editTextAddSavingsAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/hint_amount"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/textViewAddSavingsCurrentIncomesTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAddSavingsTitle" />
-
     <TextView
         android:id="@+id/textViewAddSavingsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_add_savings"
-        android:textSize="24sp"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif-black"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline40"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -54,6 +63,8 @@
         android:id="@+id/textViewAddSavingsCurrentIncomesAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/textViewAddSavingsCurrentIncomesTitle"
         app:layout_constraintEnd_toEndOf="@+id/editTextAddSavingsAmount"
@@ -78,6 +89,8 @@
         android:id="@+id/buttonAddSavingsOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
         android:text="@string/button_text_ok"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

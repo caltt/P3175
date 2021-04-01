@@ -12,12 +12,18 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.p3175.R;
 import com.example.p3175.activity.base.BaseActivity;
+import com.example.p3175.activity.bigexpense.CreateBigExpenseActivity;
+import com.example.p3175.activity.category.ChooseTransactionCategoryActivity;
 import com.example.p3175.activity.category.ManageCategoryActivity;
 import com.example.p3175.activity.main.MainActivity;
 import com.example.p3175.activity.overview.AddSavingsActivity;
@@ -28,6 +34,10 @@ import com.example.p3175.adapter.OnClickListener;
 import com.example.p3175.adapter.RecurringTransactionAdapter;
 import com.example.p3175.db.DatabaseHelper;
 import com.example.p3175.db.entity.RecurringTransaction;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.Objects;
 
 
 public class ManageRecurringTransactionActivity extends BaseActivity {
@@ -42,8 +52,9 @@ public class ManageRecurringTransactionActivity extends BaseActivity {
 
         RecyclerView recyclerViewIncome = findViewById(R.id.recyclerViewIncome);
         RecyclerView recyclerViewBill = findViewById(R.id.recycleViewBill);
-        Button buttonCreate = findViewById(R.id.buttonManageRecurringTransactionAdd);
+        FloatingActionButton buttonCreate = findViewById(R.id.buttonManageRecurringTransactionAdd);
         //endregion
+
 
         //region 1. RECYCLER VIEW
 
