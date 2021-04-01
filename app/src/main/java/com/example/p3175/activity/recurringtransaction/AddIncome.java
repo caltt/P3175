@@ -14,6 +14,8 @@ import com.example.p3175.activity.base.BaseActivity;
 import com.example.p3175.db.entity.RecurringTransaction;
 import com.example.p3175.util.Converter;
 
+import java.math.BigDecimal;
+
 public class AddIncome extends BaseActivity {
 
     @Override
@@ -57,6 +59,9 @@ public class AddIncome extends BaseActivity {
 
         //region 2. BUTTON
         buttonOK.setOnClickListener(v -> {
+
+            BigDecimal amount = Converter.stringToBigDecimal(editTextAmount.getText().toString());
+
             // db insert
             db.insertRecurringTransaction(new RecurringTransaction(
                     currentUserId,
@@ -65,6 +70,10 @@ public class AddIncome extends BaseActivity {
                             : Converter.stringToBigDecimal(editTextAmount.getText().toString()).negate(),
                     Integer.parseInt(editTextDayOfMonth.getText().toString()),
                     editTextDescription.getText().toString()));
+
+
+            currentOverview.setIncomes(currentOverview.getIncomes().add(amount));
+            db.updateOverview(currentOverview);
 
             // nav back
             onBackPressed();

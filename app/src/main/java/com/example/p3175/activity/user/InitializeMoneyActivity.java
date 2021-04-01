@@ -13,10 +13,17 @@ import androidx.annotation.RequiresApi;
 
 import com.example.p3175.R;
 import com.example.p3175.activity.base.BaseActivity;
+import com.example.p3175.activity.main.MainActivity;
 import com.example.p3175.activity.recurringtransaction.ManageIncome;
 import com.example.p3175.activity.recurringtransaction.ManageRecurringTransactionActivity;
+import com.example.p3175.db.entity.Category;
 import com.example.p3175.db.entity.RecurringTransaction;
+import com.example.p3175.db.entity.Transaction;
+import com.example.p3175.util.Calculator;
 import com.example.p3175.util.Converter;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 
 public class InitializeMoneyActivity extends BaseActivity {
@@ -55,6 +62,7 @@ public class InitializeMoneyActivity extends BaseActivity {
 
                 currentOverview.setIncomes(Converter.stringToBigDecimal(salary));
                 db.updateOverview(currentOverview);
+
 
                 // nav to main activity, unable to nav back
                 AlertDialog.Builder altdial = new AlertDialog.Builder(InitializeMoneyActivity.this);
